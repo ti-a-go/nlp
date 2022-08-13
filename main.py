@@ -31,8 +31,7 @@ def convert_doc_to_df(doc: Doc) -> DataFrame:
     return pd.DataFrame(rows, columns=columns)
 
 
-def load_raw_text():
-    file_path = "dataset/raw/txt/crítica/cantosFantasias.txt"
+def load_raw_text(file_path):
     text = ""
     with open(file_path) as f:
         text = text + f.read()
@@ -40,13 +39,16 @@ def load_raw_text():
     return text
 
 
-def main(lang):
-    doc = convert_str_to_doc(load_raw_text(), lang)
-    print(doc)
-    print(type(doc))
+def main():
+    lang = "pt"
+    text_name = 'historiasMeiaNoite'
+    genero = 'conto'
+    file_path = f"datalake/machado_de_assis/{genero}/{text_name}.txt"
+    csv_file_name = f"{text_name}.csv"
+    doc = convert_str_to_doc(load_raw_text(file_path), lang)
     df = convert_doc_to_df(doc)
-    df.to_csv("cantos_fantasias.csv")
+    df.to_csv(csv_file_name)
 
 
 if __name__ == '__main__':
-    main("pt")
+    main()
