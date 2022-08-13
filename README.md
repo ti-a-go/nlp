@@ -20,7 +20,7 @@ Um dos serviços que serão uteis desde o início é o de extração, transforma
 
 ### Armazenamento de dados
 
-Outro serviço importante é o armazenamento dos dados a serem analisados
+Outro serviço importante é o armazenamento dos dados a serem analisados.
 
 ### Ferramentas de Análise
 
@@ -52,3 +52,23 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 ```
+
+---
+
+# Como organizar os dados
+
+Para facilitar o processamento é necessário que os dados estejam em formato texto (.txt) para poderem ser processados pelas ferramentas que utilizaremos na plataforma.
+
+Além dos textos, é preciso ter metadados sobre esses textos que podem estar em formatos de tabela (.csv preferencialmente).
+
+## A estrutura de pastas
+
+Inicialmente os dados serão armazenados junto com o código do projeto. Para fins de organização será definida uma estrutura de pastas para armazenar os dados e seus metadados.
+
+Dentro da pasta data/ existe várias outras pastas que correspondem a um conjunto: texto.txt metadata.csv.
+
+
+---
+
+# Webserver
+
