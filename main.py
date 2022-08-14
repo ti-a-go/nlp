@@ -31,22 +31,28 @@ def convert_doc_to_df(doc: Doc) -> DataFrame:
     return pd.DataFrame(rows, columns=columns)
 
 
-def load_raw_text(file_path):
+def load_raw_text(file_path) -> str:
     text = ""
-    with open(file_path) as f:
-        text = text + f.read()
+    try:
+        with open(file_path, encoding='utf-8') as f:
+            text = text + f.read()
+    except OSError as err:
+        print(f'An OSError occurred when trying to open the file: {err}')
+    except Exception as exc:
+        print(f'An unpexted error occurred when trying to open the file: {exc}')
 
     return text
 
 
 def main():
-    lang = "pt"
-    text_name = 'historiasMeiaNoite'
+    text_name = 'historiasSemData'
     genero = 'conto'
     file_path = f"datalake/machado_de_assis/{genero}/{text_name}.txt"
-    csv_file_name = f"{text_name}.csv"
-    doc = convert_str_to_doc(load_raw_text(file_path), lang)
+    raw_data = load_raw_text(file_path)
+    lang = "pt"
+    doc = convert_str_to_doc(raw_data, lang)
     df = convert_doc_to_df(doc)
+    csv_file_name = f"{text_name}.csv"
     df.to_csv(csv_file_name)
 
 
