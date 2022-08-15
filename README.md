@@ -26,6 +26,12 @@ Outro serviço importante é o armazenamento dos dados a serem analisados.
 
 Esse é um dos principais serviços da plataforma já que é utilizado na Analise de Dados que é o carro chefe desse projeto.
 
+### (Reconhecimento de Entidades Nomeadas) Named Entity Recognition
+
+Referência: https://repositorio.pucrs.br/dspace/bitstream/10923/14040/2/Reconhecimento_de_Entidades_Nomeadas_para_o_Portugues_Usando_o_OpenNLP.pdf
+
+Projeto: utilizar a wikipedia para tentar reconhecer entidades nomeadas e suas categorias.
+
 ---
 
 # Instalação
@@ -57,18 +63,28 @@ pip install -r requirements.txt
 
 # Como organizar os dados
 
-Para facilitar o processamento é necessário que os dados estejam em formato texto (.txt) para poderem ser processados pelas ferramentas que utilizaremos na plataforma.
+Organizamos os dados em dois diretórios principais:
 
-Além dos textos, é preciso ter metadados sobre esses textos que podem estar em formatos de tabela (.csv preferencialmente).
+* datalake/
+* data_warehouse
+
+No dataleke/ estão os dados brutos.
+No data_warehouse estão os dados que forão processados.
 
 ## A estrutura de pastas
 
-Inicialmente os dados serão armazenados junto com o código do projeto. Para fins de organização será definida uma estrutura de pastas para armazenar os dados e seus metadados.
+Dentro do datalake, cada diretório corresponde a um dataset.
 
 Dentro da pasta data/ existe várias outras pastas que correspondem a um conjunto: texto.txt metadata.csv.
 
+Datasets atuais:
+
+* machado_de_assis
+
+Dentro do data_warehouse, cada diretório corresponde a um dataset ou mais datasets processados.
 
 ---
 
 # Webserver
 
+[projeto fututo]
