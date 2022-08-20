@@ -1,6 +1,7 @@
 import spacy
 import pandas as pd
 from spacy.tokens.doc import Doc
+from argparse import ArgumentParser
 
 
 def convert_str_to_doc(text: str, lang: str) -> Doc:
@@ -43,6 +44,23 @@ def load_raw_text(file_path) -> str:
     return text
 
 
-def txt_to_csv(input_file_path: str, output_path: str, lang: str):
+def txt_to_csv(input_file_path: str, output_file_path: str, lang: str):
     df = doc_to_df(convert_str_to_doc(load_raw_text(input_file_path), lang))
-    return df.to_csv(output_path)
+    return df.to_csv(output_file_path)
+
+
+if __name__ == '__main__':
+    # args: input_file_path, where to read the txt file.
+    # args: output_file_path, where to write the generated csv file. 
+    # args: lang, ['pt', 'en', 'es', 'fr', 'de', 'it']
+    parser = ArgumentParser()
+    parser.add_argument('-p', '--path', dest='input_file_path', required=True,
+                        help='where to read the txt file.')
+    parser.add_argument('-o', '--output', dest='output_file_path', required=True,
+                        help='where to write the generated csv file.')
+    parser.add_argument('-lang', dest='lang', default='pt',
+                        help='["pt", "en", "es", "fr", "de", "it"]',
+                        required=False, choices=['pt', 'en', 'es', 'fr', 'de', 'it'])
+
+    args = parser.parse_args()
+    print(vars(args))
