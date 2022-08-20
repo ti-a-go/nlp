@@ -1,12 +1,8 @@
-import spacy
-import pandas as pd
-from spacy.tokens.doc import Doc
-from pandas import DataFrame
 from utils.txt_to_csv import txt_to_csv
 
 
 def main():
-    text_name = 'reliquias'
+    text_name = 'variasHistorias'
     genero = 'conto'
     dataset_name = 'machado_de_assis'
     file_path = f"datalake/{dataset_name}/{genero}/{text_name}.txt"
