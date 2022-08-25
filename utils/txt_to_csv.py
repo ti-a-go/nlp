@@ -51,7 +51,7 @@ def txt_to_csv(input_file_path: str, output_file_path: str, lang: str):
 
 if __name__ == '__main__':
     # args: input_file_path, where to read the txt file.
-    # args: output_file_path, where to write the generated csv file. 
+    # args: output_file_path, where to write the generated csv file.
     # args: lang, ['pt', 'en', 'es', 'fr', 'de', 'it']
     parser = ArgumentParser()
     parser.add_argument('-p', '--path', dest='input_file_path', required=True,
