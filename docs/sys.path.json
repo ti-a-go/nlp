@@ -1,0 +1,17 @@
+{
+    "utils.__init__": [
+        "/Users/tnascimento/Pessoal/repos/data-pipeline_text/utils",
+        "/Library/Frameworks/Python.framework/Versions/3.10/lib/python310.zip",
+        "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10",
+        "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload",
+        "/Users/tnascimento/Pessoal/repos/data-pipeline_text/venv/lib/python3.10/site-packages",
+        "__main__"
+    ],
+    "scrapper.main": [
+        "/Users/tnascimento/Pessoal/repos/data-pipeline_text/scrapper",
+        "/Library/Frameworks/Python.framework/Versions/3.10/lib/python310.zip",
+        "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10",
+        "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload",
+        "/Users/tnascimento/Pessoal/repos/data-pipeline_text/venv/lib/python3.10/site-packages"
+    ]
+}
