@@ -2,3 +2,6 @@ venv
 .idea
 .ipynb_checkpoints
 .vscode
+__pycache__
+.env
+.pytest_cache
