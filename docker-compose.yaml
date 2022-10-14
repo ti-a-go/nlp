@@ -1,6 +1,21 @@
 version: '3.8'
 
 services:
+  api:
+    build: .
+    depends_on:
+      - db
+    environment:
+      STAGE: test
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://dataplatform:dataplatform@db/dataplatform
+    networks:
+      - default
+    ports:
+      - 5000:5000
+    volumes:
+      - ./app:/usr/src/app/app
+      - ./migrations:/usr/src/app/migrations
+    restart: always
   db:
     image: postgres:13-alpine
     volumes:
@@ -12,6 +27,8 @@ services:
     restart: always
     ports:
       - "5432:5432"
+    networks:
+      - default
 
 volumes:
   postgres_data:
