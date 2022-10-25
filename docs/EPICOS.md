@@ -1,7 +1,6 @@
-# DESCRIÇÃO DAS TAREFAS
+# Épicos
 
-## 1. Comparar os modelos linguísticos utilizados pelas diferentes bibliotecas de NLP
----
+## 1 Comparar os modelos linguísticos utilizados pelas diferentes bibliotecas de NLP
 
     Porquê que vale a pena fazer essa comparação?
 
@@ -35,3 +34,30 @@ Ex:
 Como vai ser a solução técinica?
 
 É necessário uma interface (RESTFull API possivelmente) que vai receber o dado bruto (txt) para ser tokenizado.
+
+## 2 Classificação dos dados
+
+Como classificar os dados?
+
+Num nível mais alto os dados podem ser classificados por conteúdo em grandes áreas como por exemplo:
+
+* Dados jurídicos
+* Dados literários
+* Dados jornalísticos
+* Dados de código fonte
+
+## 2.2 Dados Jurídicos
+
+Análise de dados jurídicos
+
+### 2.2.1 Ingestão
+
+O primeiro texto jurídico ingerido será a **Constitúição Federal**.
+
+Outros textos a ser ingerídos:
+
+* Código de Defesa do Consumidor
+* Legislação de Transito
+* Textos Acadêmicos da Area do Direito
+* Livros publicados sobre Direito
+
