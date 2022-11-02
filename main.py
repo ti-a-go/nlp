@@ -1,7 +1,9 @@
-from utils.txt_to_csv import txt_to_csv
+from lib.txt_to_csv import txt_to_csv
 
 
-def main():
+
+
+def exemplo_obra_machado_de_assis():
     text_name = 'variasHistorias'
     genero = 'conto'
     dataset_name = 'machado_de_assis'
@@ -9,6 +11,12 @@ def main():
     lang = "pt"
     csv_file_name = f"data_warehouse/{dataset_name}/{genero}/{text_name}.csv"
     txt_to_csv(file_path, csv_file_name, lang)
+
+
+
+
+def main():
+    exemplo_obra_machado_de_assis()
 
 
 if __name__ == '__main__':
