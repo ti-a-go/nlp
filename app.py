@@ -1,8 +1,15 @@
-from flask import Flask
+from typing import Union
+
+from fastapi import FastAPI
+
+app = FastAPI()
 
 
-app = Flask(__name__)
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
 
-@app.route("/", methods=["GET"])
-def hello_world():
-    return {"hello": "world"}
+
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: Union[str, None] = None):
+    return {"item_id": item_id, "q": q}
