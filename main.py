@@ -25,6 +25,9 @@ def create_doc(text: str, metadata: dict):
     http - return a json that can by an http response body.
     """
 
+def create_metadata():
+    
+
 
 
 def main():
