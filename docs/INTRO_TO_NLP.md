@@ -2,12 +2,17 @@
 
 palavras-chave: String, Unicode, Encoding
 
-Computadores entendem apenas números. Então é necessário uma forma de representar a língua através de números. Então temos um tipo de dado especial chamado "string". Uma string é uma cadeia de caracteres. Um caracter é um simbolo representado por um número.
+Computadores têm esse nome por que são seres que computam, ou seja, calculam. Calcular é segundo o google "determinar o valor ou grandeza numérica por meio de cálculo matemático." Isso significa dizer que computadores só sabem fazer operações matamáticas (operações aritiméticas: some, subtração, multiplicação e divisão). Então como os computadores podem fazer operações linguísticas, ou seja, como os computadores podem entender e gerar textos em línguas naturais (pt, en, es, ...)?
+
+Computadores entendem apenas números. Então é necessário uma forma de representar a língua através de números.
+
+A língua, por sua vez, é uma sequencia de sons que representam significados. No Caso da língua escrita podemos falar em uma sequência de letras. Então o computados precisa de uma forma de representar uma sequência de sons (no caso da fala) ou letras no caso da escrita.
+
+A forma escolhida para fazer isso foi a seguinte:
 
 Vamos imaginar que queremos representar o alfabeto do português através de números. Poderíamos fazer o seguinte:
 
 a = 1
-
 
 b = 2
 
@@ -27,7 +32,9 @@ O computador então seria programado para representar a palavra "café" da segui
 
 3 1 6 5
 
-A partir disso é possível criar uma tabela com a representação numérica de qualquer caracter utilizado em qualquer língua. Essa tabela já existe e se chama Unicode.
+A partir disso é possível criar uma tabela com a representação numérica de qualquer "caracter" utilizado em qualquer língua. Essa tabela já existe e se chama Unicode. Vamo falar caracter em vez de letras para podermos incluir nesse conjunto os sinais de pontuação e outros simbolos que podemos usilizar na língua escrita.
+
+Essa esplicação é simplista para fins didáticos, mas a solução real para esse problema de representar textos em computadores é um pouco mais complexa e será apresentado abaixo.
 
 ## Unicode
 
