@@ -1,11 +1,12 @@
-# Como os computadores representam a língua natural?
+# Como os computadores representam línguas naturais como o português?
+(Representação computacional de dados textuais)
 
 palavras-chave: String, Unicode, Encoding
 
-Computadores têm esse nome por que são seres que computam, ou seja, calculam. Calcular é segundo o google "determinar o valor ou grandeza numérica por meio de cálculo matemático." Isso significa dizer que computadores só sabem fazer operações matamáticas (operações aritiméticas: some, subtração, multiplicação e divisão). Então como os computadores podem fazer operações linguísticas, ou seja, como os computadores podem entender e gerar textos em línguas naturais (pt, en, es, ...)?
+Computadores têm esse nome porque são seres que computam, ou seja, calculam. Calcular segundo o google é "determinar o valor ou grandeza numérica por meio de cálculo matemático." Isso significa dizer que computadores só sabem fazer operações matamáticas (operações aritiméticas: soma, subtração, multiplicação e divisão). Então como os computadores podem fazer operações linguísticas, ou seja, como os computadores podem entender e gerar textos em línguas naturais (pt, en, es, ...)?
 
 Computadores entendem apenas números. Então é necessário uma forma de representar a língua através de números.
-
+Vamos buscar um conceito de língua no livro de sintaxe do professor Mário ?????.
 A língua, por sua vez, é uma sequencia de sons que representam significados. No Caso da língua escrita podemos falar em uma sequência de letras. Então o computados precisa de uma forma de representar uma sequência de sons (no caso da fala) ou letras no caso da escrita.
 
 A forma escolhida para fazer isso foi a seguinte:
@@ -38,3 +39,6 @@ Essa esplicação é simplista para fins didáticos, mas a solução real para e
 
 ## Unicode
 
+## Encoding
+
+## Palavras & Tokens
